@@ -1,0 +1,17 @@
+.section .data
+
+number: .byte 5, 6, 9, 15, 8, 9
+
+.section .text
+
+.globl _start
+
+_start:
+
+movl $2, %ecx
+movl number(,%ecx,2), %eax
+movl %eax, %ebx
+
+movl $1, %eax
+int $0x80
+

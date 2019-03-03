@@ -1,0 +1,11 @@
+.section .text
+
+.globl _start
+
+_start:
+
+mov $1, %eax
+mov _start, $ebx
+
+int $0x80
+
